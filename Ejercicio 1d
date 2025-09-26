@@ -1,0 +1,13 @@
+/ Online C++ compiler to run C++ program online
+#include <iostream>
+#include <string>
+using namespace std;
+//FUNCION DE ARREGLO
+string Estado[2]= {"Pendiente", "Pagado" };
+int main(){
+    cout<<"Estado de la factura: "<<endl;
+    for(int i = 0; i<2; i++){
+        cout<<"IdEstado "<<i<<" ==> "<<Estado[i]<<endl;
+       
+    }
+    return 0;
