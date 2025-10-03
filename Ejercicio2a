@@ -1,0 +1,26 @@
+#include <iostream>
+#include <stdlib.h>
+#include <ctime>
+using namespace std;
+int DetalleCliente [10000][3];
+void llamarDetalleCliente(){
+   
+    for (int i=0; i<10000; i++){
+        DetalleCliente[i][0] = rand()%2;//Va a generar numeros del 0 a 2
+        DetalleCliente[i][1] = rand()%83+1943;//Va a generar de 0 a 82
+        DetalleCliente[i][2] = rand()%195;//Va a generar de 0 a 195
+    }
+}
+void impresionDetallefun() {
+    for (int i = 0; i < 10000; i++) {
+        cout << "Detalle cliente " << DetalleCliente[i][0]
+             << " : Año " << DetalleCliente[i][1]
+             << " : País " << DetalleCliente[i][2] << endl;
+    }
+}
+int main(){
+    srand(time (0));
+    llamarDetalleCliente();
+    impresionDetallefun();
+return 0;
+}
